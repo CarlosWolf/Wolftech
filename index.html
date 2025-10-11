@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Header con Menú Desplegable</title>
+    <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+    <header class="header">
+        <div class="header-top">
+            <div class="logo-container">
+                <a href="#" class="logo-link">
+                    <img src="img/wolftech.png" alt="Logo Wolftech Chetumal" class="logo-img">
+                </a>
+            </div>
+            
+            <ul class="nav-menu">
+                <li class="nav-item">
+                    <a class="nav-link" data-dropdown="dropdown1">Productos</a>
+                    <div class="dropdown-content" id="dropdown1">
+                        <button class="close-dropdown">X</button>
+                        <a href="#">Laptops</a>
+                        <a href="#">Componentes</a>
+                        <a href="#">Periféricos</a>
+                        <a href="#">Monitores</a>
+                    </div>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" data-dropdown="dropdown2">Servicios</a>
+                    <div class="dropdown-content" id="dropdown2">
+                        <button class="close-dropdown">X</button>
+                        <a href="#">Soporte Técnico</a>
+                        <a href="#">Garantía</a>
+                        <a href="#">Reparaciones</a>
+                        <a href="#">Consultoría</a>
+                    </div>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" data-dropdown="dropdown3">Sobre Nosotros</a>
+                    <div class="dropdown-content" id="dropdown3">
+                        <button class="close-dropdown">X</button>
+                        <a href="#">Nuestra Historia</a>
+                        <a href="#">Equipo</a>
+                        <a href="#">Testimonios</a>
+                        <a href="#">Contacto</a>
+                    </div>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" data-dropdown="dropdown4">Blog</a>
+                    <div class="dropdown-content" id="dropdown4">
+                        <button class="close-dropdown">X</button>
+                        <a href="#">Últimas Noticias</a>
+                        <a href="#">Tutoriales</a>
+                        <a href="#">Reseñas</a>
+                        <a href="#">Eventos</a>
+                    </div>
+                </li>
+            </ul>
+        </div>
+    </header>
+
+    <section class="main">
+        <div class="carousel" onmouseover="pauseCarousel()" onmouseout="resumeCarousel()">
+            <div class="carousel-images">
+                <img src="img/banner_facbook.png" alt="Banner Wolftech Chetumal">
+                <img src="img/banner_agendar_cita.png" alt="Transporte Bacalar">
+                <img src="img/ban-aeropuerto.jpg" alt="Imagen 3">
+            </div>
+            <button class="carousel-btn prev" onclick="changeSlide(-1)">&#8249;</button>
+            <button class="carousel-btn next" onclick="changeSlide(1)">&#8250;</button>
+            <div class="carousel-indicators"></div>
+        </div>   
+    </section>
+
+   <script src="js/index.js"></script>
+   <script src="js/carousel.js"></script>
+</body>
+</html>
