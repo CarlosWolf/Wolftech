@@ -1,21 +1,23 @@
 <!DOCTYPE html>
 <html lang="es">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Header con Menú Desplegable</title>
     <link rel="stylesheet" href="css/style.css">
 </head>
+
 <body>
     <header class="header">
         <div class="header-top">
-            <div class="logo-container">
-                <a href="#" class="logo-link">
-                    <img src="img/wolftech.png" alt="Logo Wolftech Chetumal" class="logo-img">
-                </a>
-            </div>
-            
-            <ul class="nav-menu">
+            <a href="#" class="logo-link">
+                <img src="img/wolftech.png" alt="Logo Wolftech Chetumal" class="logo-img">
+            </a>
+
+            <button class="menu-toggle" id="menuToggle">☰</button>
+
+            <ul class="nav-menu" id="navMenu">
                 <li class="nav-item">
                     <a class="nav-link" data-dropdown="dropdown1">Productos</a>
                     <div class="dropdown-content" id="dropdown1">
@@ -60,20 +62,42 @@
         </div>
     </header>
 
+
     <section class="main">
         <div class="carousel" onmouseover="pauseCarousel()" onmouseout="resumeCarousel()">
             <div class="carousel-images">
-                <img src="img/banner_facbook.png" alt="Banner Wolftech Chetumal">
-                <img src="img/banner_agendar_cita.png" alt="Transporte Bacalar">
-                <img src="img/ban-aeropuerto.jpg" alt="Imagen 3">
+
+                <picture>
+                    <source media="(max-width: 768px)" srcset="img/banner_facbook_mobile_1.png">
+                    <!-- Imagen para celular (cuando la pantalla es menor o igual a 768px)-->
+                    <source srcset="img/banner_facbook.png">
+                    <!-- Segundo <source> → Imagen .webp para pantallas grandes -->
+                    <img src="img/banner_facebook.png" alt="Banner Wolftech Chetumal">
+                    <!-- Imagen de respaldo en caso de que el navegador no soporte WebP -->
+                </picture>
+
+                <picture>
+                    <source media="(max-width: 768px)" srcset="img/banner_facbook_mobile_2.png">
+                    <source srcset="img/banner_facbook.png">
+                    <img src="img/banner_agendar_cita.png" alt="Banner Servicio de Mantenimiento de Equipos de Computo">
+                </picture>
+
+                <picture>
+                    <source media="(max-width: 768px)" srcset="img/banner_agendar_cita.png">
+                    <source srcset="img/banner_agendar_cita.png">
+                    <img src="img/banner_agendar_cita.png" alt="Banner para agendar cita en wolftech">
+                </picture>
+
             </div>
+
             <button class="carousel-btn prev" onclick="changeSlide(-1)">&#8249;</button>
             <button class="carousel-btn next" onclick="changeSlide(1)">&#8250;</button>
             <div class="carousel-indicators"></div>
-        </div>   
+        </div>
     </section>
 
-   <script src="js/index.js"></script>
-   <script src="js/carousel.js"></script>
+    <script src="js/index.js"></script>
+    <script src="js/carousel.js"></script>
 </body>
+
 </html>

@@ -1,5 +1,5 @@
 let currentIndex = 0;
-const slides = document.querySelectorAll(".carousel-images img");
+const slides = document.querySelectorAll(".carousel-images picture img");
 const totalSlides = slides.length;
 const indicatorsContainer = document.querySelector(".carousel-indicators");
 let autoSlideInterval;
